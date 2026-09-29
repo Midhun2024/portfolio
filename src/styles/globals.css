@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ocean Cyan Palette */
+    --background: #fcfdfd; /* Cool, sleek white base */
+    --foreground: #0f172a; /* Deep slate for high contrast */
+    
+    /* Vibrant, tech-forward Cyan */
+    --primary: #0891b2; 
+    --primary-foreground: #ffffff; 
+    
+    /* Soft cyan highlights */
+    --accent: #cffafe; 
+    --accent-foreground: #164e63; 
+    
+    /* Clean, cool neutral areas */
+    --muted: #f1f5f9; 
+    --muted-foreground: #64748b; 
+    
+    /* Subtle cool borders */
+    --border: #e2e8f0; 
+    
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+
+    --radius: 1.25rem; /* Smoother, modern 20px corners */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased min-h-screen scroll-smooth;
+  }
+
+  ::selection {
+    background-color: rgb(8 145 178 / 0.2); /* cyan-600 / 20% */
+    color: var(--primary);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
